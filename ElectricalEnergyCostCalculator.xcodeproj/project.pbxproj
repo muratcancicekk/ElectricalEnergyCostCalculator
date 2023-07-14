@@ -1,0 +1,607 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FB032C852A5723B800004B4A /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB032C842A5723B800004B4A /* UITextField+Extension.swift */; };
+		FB032C882A5725AE00004B4A /* BaseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB032C872A5725AE00004B4A /* BaseButton.swift */; };
+		FB032C8A2A5725B700004B4A /* BaseButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB032C892A5725B700004B4A /* BaseButton.xib */; };
+		FB032C8C2A57267600004B4A /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB032C8B2A57267600004B4A /* UIButton+Extension.swift */; };
+		FB032C8E2A5726B300004B4A /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB032C8D2A5726B300004B4A /* UIImage+Extension.swift */; };
+		FB032C902A572C7200004B4A /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB032C8F2A572C7200004B4A /* HomeViewModel.swift */; };
+		FB032C942A572C9F00004B4A /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB032C922A572C9F00004B4A /* DetailsViewController.swift */; };
+		FB032C952A572C9F00004B4A /* DetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB032C932A572C9F00004B4A /* DetailsViewController.xib */; };
+		FB032C972A572CAD00004B4A /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB032C962A572CAD00004B4A /* DetailsViewModel.swift */; };
+		FB032C992A57335700004B4A /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB032C982A57335700004B4A /* UILabel+Extension.swift */; };
+		FB032C9C2A57386400004B4A /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB032C9B2A57386400004B4A /* AlertManager.swift */; };
+		FB032C9F2A5738E900004B4A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB032C9E2A5738E900004B4A /* Constants.swift */; };
+		FB032CA12A573BE600004B4A /* SeguePerformable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB032CA02A573BE600004B4A /* SeguePerformable.swift */; };
+		FB032CA42A573C6000004B4A /* BaseNavigationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB032CA32A573C6000004B4A /* BaseNavigationVC.swift */; };
+		FB032CA62A57422A00004B4A /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB032CA52A57422A00004B4A /* Helpers.swift */; };
+		FB032CA92A574ACB00004B4A /* ElectricalEnergyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB032CA82A574ACB00004B4A /* ElectricalEnergyModel.swift */; };
+		FB032CAC2A574C6800004B4A /* UserDefaultsKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB032CAB2A574C6800004B4A /* UserDefaultsKey.swift */; };
+		FB032CAE2A574C9000004B4A /* UserDefaultsOrganizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB032CAD2A574C9000004B4A /* UserDefaultsOrganizer.swift */; };
+		FB032CB02A574C9F00004B4A /* UserDefaultsUnityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB032CAF2A574C9F00004B4A /* UserDefaultsUnityManager.swift */; };
+		FB032CB22A574CAF00004B4A /* UserDefaultError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB032CB12A574CAF00004B4A /* UserDefaultError.swift */; };
+		FB032CB52A574D5300004B4A /* ElectricalCalculatorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB032CB42A574D5300004B4A /* ElectricalCalculatorManager.swift */; };
+		FB2279F32A571D5B006C28DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2279F22A571D5B006C28DC /* AppDelegate.swift */; };
+		FB2279F52A571D5B006C28DC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2279F42A571D5B006C28DC /* SceneDelegate.swift */; };
+		FB2279F72A571D5B006C28DC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2279F62A571D5B006C28DC /* ViewController.swift */; };
+		FB2279FA2A571D5B006C28DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB2279F82A571D5B006C28DC /* Main.storyboard */; };
+		FB2279FC2A571D5D006C28DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB2279FB2A571D5D006C28DC /* Assets.xcassets */; };
+		FB2279FF2A571D5D006C28DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB2279FD2A571D5D006C28DC /* LaunchScreen.storyboard */; };
+		FB227A0F2A571E73006C28DC /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB227A0D2A571E73006C28DC /* HomeViewController.swift */; };
+		FB227A102A571E73006C28DC /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB227A0E2A571E73006C28DC /* HomeViewController.xib */; };
+		FB227A132A572167006C28DC /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB227A122A572167006C28DC /* BaseView.swift */; };
+		FB227A162A572192006C28DC /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB227A152A572192006C28DC /* UIView+Extension.swift */; };
+		FB227A192A5721DF006C28DC /* BaseTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB227A182A5721DF006C28DC /* BaseTextField.swift */; };
+		FB227A1B2A5721E9006C28DC /* BaseTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB227A1A2A5721E9006C28DC /* BaseTextField.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		FB032C842A5723B800004B4A /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
+		FB032C872A5725AE00004B4A /* BaseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseButton.swift; sourceTree = "<group>"; };
+		FB032C892A5725B700004B4A /* BaseButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaseButton.xib; sourceTree = "<group>"; };
+		FB032C8B2A57267600004B4A /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
+		FB032C8D2A5726B300004B4A /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		FB032C8F2A572C7200004B4A /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		FB032C922A572C9F00004B4A /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		FB032C932A572C9F00004B4A /* DetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailsViewController.xib; sourceTree = "<group>"; };
+		FB032C962A572CAD00004B4A /* DetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
+		FB032C982A57335700004B4A /* UILabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
+		FB032C9B2A57386400004B4A /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
+		FB032C9E2A5738E900004B4A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		FB032CA02A573BE600004B4A /* SeguePerformable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeguePerformable.swift; sourceTree = "<group>"; };
+		FB032CA32A573C6000004B4A /* BaseNavigationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationVC.swift; sourceTree = "<group>"; };
+		FB032CA52A57422A00004B4A /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		FB032CA82A574ACB00004B4A /* ElectricalEnergyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectricalEnergyModel.swift; sourceTree = "<group>"; };
+		FB032CAB2A574C6800004B4A /* UserDefaultsKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsKey.swift; sourceTree = "<group>"; };
+		FB032CAD2A574C9000004B4A /* UserDefaultsOrganizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsOrganizer.swift; sourceTree = "<group>"; };
+		FB032CAF2A574C9F00004B4A /* UserDefaultsUnityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsUnityManager.swift; sourceTree = "<group>"; };
+		FB032CB12A574CAF00004B4A /* UserDefaultError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultError.swift; sourceTree = "<group>"; };
+		FB032CB42A574D5300004B4A /* ElectricalCalculatorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectricalCalculatorManager.swift; sourceTree = "<group>"; };
+		FB2279EF2A571D5B006C28DC /* ElectricalEnergyCostCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ElectricalEnergyCostCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB2279F22A571D5B006C28DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FB2279F42A571D5B006C28DC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		FB2279F62A571D5B006C28DC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FB2279F92A571D5B006C28DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FB2279FB2A571D5D006C28DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FB2279FE2A571D5D006C28DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FB227A002A571D5D006C28DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB227A0D2A571E73006C28DC /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		FB227A0E2A571E73006C28DC /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		FB227A122A572167006C28DC /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		FB227A152A572192006C28DC /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		FB227A182A5721DF006C28DC /* BaseTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTextField.swift; sourceTree = "<group>"; };
+		FB227A1A2A5721E9006C28DC /* BaseTextField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaseTextField.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FB2279EC2A571D5B006C28DC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FB032C862A5725A100004B4A /* BaseButton */ = {
+			isa = PBXGroup;
+			children = (
+				FB032C872A5725AE00004B4A /* BaseButton.swift */,
+				FB032C892A5725B700004B4A /* BaseButton.xib */,
+			);
+			path = BaseButton;
+			sourceTree = "<group>";
+		};
+		FB032C912A572C9100004B4A /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				FB032C922A572C9F00004B4A /* DetailsViewController.swift */,
+				FB032C932A572C9F00004B4A /* DetailsViewController.xib */,
+				FB032C962A572CAD00004B4A /* DetailsViewModel.swift */,
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
+		FB032C9A2A57385800004B4A /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				FB032CB32A574D2F00004B4A /* ElectricalCalculatorManager */,
+				FB032CAA2A574C4F00004B4A /* UserDefaultsManager */,
+				FB032C9B2A57386400004B4A /* AlertManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		FB032C9D2A5738DF00004B4A /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				FB032C9E2A5738E900004B4A /* Constants.swift */,
+				FB032CA52A57422A00004B4A /* Helpers.swift */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		FB032CA22A573C5000004B4A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FB032CA32A573C6000004B4A /* BaseNavigationVC.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		FB032CA72A574ABC00004B4A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FB032CA82A574ACB00004B4A /* ElectricalEnergyModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FB032CAA2A574C4F00004B4A /* UserDefaultsManager */ = {
+			isa = PBXGroup;
+			children = (
+				FB032CAB2A574C6800004B4A /* UserDefaultsKey.swift */,
+				FB032CAD2A574C9000004B4A /* UserDefaultsOrganizer.swift */,
+				FB032CAF2A574C9F00004B4A /* UserDefaultsUnityManager.swift */,
+				FB032CB12A574CAF00004B4A /* UserDefaultError.swift */,
+			);
+			path = UserDefaultsManager;
+			sourceTree = "<group>";
+		};
+		FB032CB32A574D2F00004B4A /* ElectricalCalculatorManager */ = {
+			isa = PBXGroup;
+			children = (
+				FB032CB42A574D5300004B4A /* ElectricalCalculatorManager.swift */,
+			);
+			path = ElectricalCalculatorManager;
+			sourceTree = "<group>";
+		};
+		FB2279E62A571D5B006C28DC = {
+			isa = PBXGroup;
+			children = (
+				FB2279F12A571D5B006C28DC /* ElectricalEnergyCostCalculator */,
+				FB2279F02A571D5B006C28DC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FB2279F02A571D5B006C28DC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FB2279EF2A571D5B006C28DC /* ElectricalEnergyCostCalculator.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FB2279F12A571D5B006C28DC /* ElectricalEnergyCostCalculator */ = {
+			isa = PBXGroup;
+			children = (
+				FB032CA72A574ABC00004B4A /* Model */,
+				FB032CA22A573C5000004B4A /* Resources */,
+				FB227A112A572156006C28DC /* Views */,
+				FB227A0B2A571DE8006C28DC /* LaunchScreen */,
+				FB227A0A2A571DE0006C28DC /* Controllers */,
+				FB227A092A571DD7006C28DC /* Utilities */,
+				FB227A072A571DC8006C28DC /* Supports */,
+				FB227A062A571DAD006C28DC /* StoryBoards */,
+				FB2279F62A571D5B006C28DC /* ViewController.swift */,
+				FB2279FB2A571D5D006C28DC /* Assets.xcassets */,
+				FB227A002A571D5D006C28DC /* Info.plist */,
+			);
+			path = ElectricalEnergyCostCalculator;
+			sourceTree = "<group>";
+		};
+		FB227A062A571DAD006C28DC /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				FB2279F82A571D5B006C28DC /* Main.storyboard */,
+			);
+			path = StoryBoards;
+			sourceTree = "<group>";
+		};
+		FB227A072A571DC8006C28DC /* Supports */ = {
+			isa = PBXGroup;
+			children = (
+				FB2279F22A571D5B006C28DC /* AppDelegate.swift */,
+				FB2279F42A571D5B006C28DC /* SceneDelegate.swift */,
+			);
+			path = Supports;
+			sourceTree = "<group>";
+		};
+		FB227A092A571DD7006C28DC /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				FB032C9D2A5738DF00004B4A /* Tools */,
+				FB032C9A2A57385800004B4A /* Managers */,
+				FB227A142A572181006C28DC /* Extension */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		FB227A0A2A571DE0006C28DC /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FB032C912A572C9100004B4A /* Details */,
+				FB227A0C2A571E0C006C28DC /* Home */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		FB227A0B2A571DE8006C28DC /* LaunchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				FB2279FD2A571D5D006C28DC /* LaunchScreen.storyboard */,
+			);
+			path = LaunchScreen;
+			sourceTree = "<group>";
+		};
+		FB227A0C2A571E0C006C28DC /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				FB227A0D2A571E73006C28DC /* HomeViewController.swift */,
+				FB227A0E2A571E73006C28DC /* HomeViewController.xib */,
+				FB032C8F2A572C7200004B4A /* HomeViewModel.swift */,
+				FB032CA02A573BE600004B4A /* SeguePerformable.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		FB227A112A572156006C28DC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FB032C862A5725A100004B4A /* BaseButton */,
+				FB227A172A5721CC006C28DC /* BaseTextField */,
+				FB227A122A572167006C28DC /* BaseView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FB227A142A572181006C28DC /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				FB227A152A572192006C28DC /* UIView+Extension.swift */,
+				FB032C842A5723B800004B4A /* UITextField+Extension.swift */,
+				FB032C8B2A57267600004B4A /* UIButton+Extension.swift */,
+				FB032C8D2A5726B300004B4A /* UIImage+Extension.swift */,
+				FB032C982A57335700004B4A /* UILabel+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		FB227A172A5721CC006C28DC /* BaseTextField */ = {
+			isa = PBXGroup;
+			children = (
+				FB227A182A5721DF006C28DC /* BaseTextField.swift */,
+				FB227A1A2A5721E9006C28DC /* BaseTextField.xib */,
+			);
+			path = BaseTextField;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FB2279EE2A571D5B006C28DC /* ElectricalEnergyCostCalculator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB227A032A571D5D006C28DC /* Build configuration list for PBXNativeTarget "ElectricalEnergyCostCalculator" */;
+			buildPhases = (
+				FB2279EB2A571D5B006C28DC /* Sources */,
+				FB2279EC2A571D5B006C28DC /* Frameworks */,
+				FB2279ED2A571D5B006C28DC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ElectricalEnergyCostCalculator;
+			productName = ElectricalEnergyCostCalculator;
+			productReference = FB2279EF2A571D5B006C28DC /* ElectricalEnergyCostCalculator.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FB2279E72A571D5B006C28DC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1410;
+				LastUpgradeCheck = 1410;
+				TargetAttributes = {
+					FB2279EE2A571D5B006C28DC = {
+						CreatedOnToolsVersion = 14.1;
+					};
+				};
+			};
+			buildConfigurationList = FB2279EA2A571D5B006C28DC /* Build configuration list for PBXProject "ElectricalEnergyCostCalculator" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FB2279E62A571D5B006C28DC;
+			productRefGroup = FB2279F02A571D5B006C28DC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FB2279EE2A571D5B006C28DC /* ElectricalEnergyCostCalculator */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FB2279ED2A571D5B006C28DC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB032C952A572C9F00004B4A /* DetailsViewController.xib in Resources */,
+				FB032C8A2A5725B700004B4A /* BaseButton.xib in Resources */,
+				FB227A1B2A5721E9006C28DC /* BaseTextField.xib in Resources */,
+				FB2279FF2A571D5D006C28DC /* LaunchScreen.storyboard in Resources */,
+				FB2279FC2A571D5D006C28DC /* Assets.xcassets in Resources */,
+				FB2279FA2A571D5B006C28DC /* Main.storyboard in Resources */,
+				FB227A102A571E73006C28DC /* HomeViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FB2279EB2A571D5B006C28DC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB032C9C2A57386400004B4A /* AlertManager.swift in Sources */,
+				FB032C9F2A5738E900004B4A /* Constants.swift in Sources */,
+				FB227A162A572192006C28DC /* UIView+Extension.swift in Sources */,
+				FB032CB52A574D5300004B4A /* ElectricalCalculatorManager.swift in Sources */,
+				FB032CA62A57422A00004B4A /* Helpers.swift in Sources */,
+				FB032CB02A574C9F00004B4A /* UserDefaultsUnityManager.swift in Sources */,
+				FB2279F72A571D5B006C28DC /* ViewController.swift in Sources */,
+				FB032C992A57335700004B4A /* UILabel+Extension.swift in Sources */,
+				FB032CB22A574CAF00004B4A /* UserDefaultError.swift in Sources */,
+				FB227A192A5721DF006C28DC /* BaseTextField.swift in Sources */,
+				FB032C8C2A57267600004B4A /* UIButton+Extension.swift in Sources */,
+				FB2279F32A571D5B006C28DC /* AppDelegate.swift in Sources */,
+				FB032CA42A573C6000004B4A /* BaseNavigationVC.swift in Sources */,
+				FB032CAC2A574C6800004B4A /* UserDefaultsKey.swift in Sources */,
+				FB032C882A5725AE00004B4A /* BaseButton.swift in Sources */,
+				FB227A132A572167006C28DC /* BaseView.swift in Sources */,
+				FB032CA92A574ACB00004B4A /* ElectricalEnergyModel.swift in Sources */,
+				FB032C902A572C7200004B4A /* HomeViewModel.swift in Sources */,
+				FB032C852A5723B800004B4A /* UITextField+Extension.swift in Sources */,
+				FB2279F52A571D5B006C28DC /* SceneDelegate.swift in Sources */,
+				FB032CAE2A574C9000004B4A /* UserDefaultsOrganizer.swift in Sources */,
+				FB032C8E2A5726B300004B4A /* UIImage+Extension.swift in Sources */,
+				FB032C972A572CAD00004B4A /* DetailsViewModel.swift in Sources */,
+				FB032CA12A573BE600004B4A /* SeguePerformable.swift in Sources */,
+				FB032C942A572C9F00004B4A /* DetailsViewController.swift in Sources */,
+				FB227A0F2A571E73006C28DC /* HomeViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		FB2279F82A571D5B006C28DC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FB2279F92A571D5B006C28DC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FB2279FD2A571D5D006C28DC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FB2279FE2A571D5D006C28DC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FB227A012A571D5D006C28DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FB227A022A571D5D006C28DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FB227A042A571D5D006C28DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8C89698647;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ElectricalEnergyCostCalculator/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = personal.ElectricalEnergyCostCalculator;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FB227A052A571D5D006C28DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8C89698647;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ElectricalEnergyCostCalculator/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = personal.ElectricalEnergyCostCalculator;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FB2279EA2A571D5B006C28DC /* Build configuration list for PBXProject "ElectricalEnergyCostCalculator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB227A012A571D5D006C28DC /* Debug */,
+				FB227A022A571D5D006C28DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FB227A032A571D5D006C28DC /* Build configuration list for PBXNativeTarget "ElectricalEnergyCostCalculator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB227A042A571D5D006C28DC /* Debug */,
+				FB227A052A571D5D006C28DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FB2279E72A571D5B006C28DC /* Project object */;
+}
