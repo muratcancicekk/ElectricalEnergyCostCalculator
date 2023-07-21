@@ -11,7 +11,6 @@ struct DetailsViewData {
     let customerNumber: String
     let currentMeter: Int
     let usersData: [ElectricalEnergyModel]
-    
 }
 
 protocol DetailsViewModelInterface: AnyObject {
@@ -23,12 +22,13 @@ protocol DetailsViewModelInterface: AnyObject {
 }
 
 final class DetailsViewModel {
-    var customerNumber: String = ""
-    var currentMeter: Int = 0
-    var previousMeter: Int = 0
-    var amount: Double = 0
-    var usersData = [ElectricalEnergyModel]()
-    var registeredUserData: ElectricalEnergyModel?
+    
+   private var customerNumber: String = ""
+   private var currentMeter: Int = 0
+   private var previousMeter: Int = 0
+   private var amount: Double = 0
+   private var usersData = [ElectricalEnergyModel]()
+   private var registeredUserData: ElectricalEnergyModel?
     weak var view: DetailsViewControllerInterface?
     
     init(viewData: DetailsViewData, view: DetailsViewControllerInterface) {
@@ -41,12 +41,11 @@ final class DetailsViewModel {
 }
 extension DetailsViewModel: DetailsViewModelInterface {
     
+    // find registered user
     func registeredUser() -> ElectricalEnergyModel? {
         if let foundModel = usersData.first(where: { $0.customerNumber == customerNumber }) {
-            var updatedModel = foundModel
+            let updatedModel = foundModel
             return updatedModel
-        } else {
-            
         }
         return nil
     }
@@ -54,23 +53,24 @@ extension DetailsViewModel: DetailsViewModelInterface {
     func setUser() {
         let registerUser = registeredUser()
         if registerUser != nil {
-            let data = ElectricalEnergyModel(customerNumber: customerNumber, currentMeter: Int(currentMeter) , lastMeter:registerUser?.lastMeter ?? 0 , paymentValue: amount)
+            do {
+                if let index = usersData.firstIndex(where: { $0.customerNumber == customerNumber }) {
+                    usersData[index].currentMeter = currentMeter
+                    usersData[index].paymentValue = amount
+                    try UserDefaultsOrganizer.users.setModel(usersData)
+                }
+            } catch {
+                LoggerManager.log(.error, error.localizedDescription)
+            }
+            
+        } else {
+            let data = ElectricalEnergyModel(customerNumber: customerNumber, currentMeter: Int(currentMeter) , lastMeter: 0, paymentValue: amount)
             usersData.append(data)
             do {
                 try UserDefaultsOrganizer.users.setModel(usersData)
             } catch {
-                // TODO: Logger
-                print("error")
+                LoggerManager.log(.error, error.localizedDescription)
             }
-        }
-        
-        let data = ElectricalEnergyModel(customerNumber: customerNumber, currentMeter: Int(currentMeter) , lastMeter: 0, paymentValue: amount)
-        usersData.append(data)
-        do {
-            try UserDefaultsOrganizer.users.setModel(usersData)
-        } catch {
-            // TODO: Logger
-            print("error")
         }
     }
     
@@ -85,6 +85,6 @@ extension DetailsViewModel: DetailsViewModelInterface {
     func viewDidLoad() {
         registeredUserData = registeredUser()
         electricCalculator()
-        view?.configure()
+        view?.configure(amount: amount, currentMeter: currentMeter)
     }
 }

@@ -13,11 +13,16 @@ enum TextFieldTypeChoose {
     case number
 }
 
+protocol BaseTextFieldEndEditingProtocol: AnyObject {
+    func endEditing(text: String)
+}
+
 class BaseTextField: BaseView {
     
     @IBOutlet private weak var textField: UITextField!
     
     var textFieldType: TextFieldTypeChoose = .normal
+    var delegate: BaseTextFieldEndEditingProtocol?
     
     @Published var fieldValue = "" {
         didSet {
@@ -56,13 +61,13 @@ extension BaseTextField: UITextFieldDelegate {
                 let cancelAction = UIAlertAction(title: Constants.shared.globalCancel, style: .cancel, handler: nil)
 
                 AlertManager.showAlert(title: Constants.shared.alphaNumericAlertHeader, message: Constants.shared.alphaNumericAlertDesc, preferredStyle: .alert, actions: [okAction, cancelAction])
-
             }
         }
         
         if textField.text?.isEmpty ?? true {
             textField.layer.borderColor = UIColor.black.cgColor
         }
+        delegate?.endEditing(text: textField.text ?? "")
     }
     
     func textFieldDidChangeSelection(_ textField: UITextField) {

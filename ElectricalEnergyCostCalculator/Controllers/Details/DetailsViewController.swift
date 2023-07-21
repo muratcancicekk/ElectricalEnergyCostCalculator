@@ -8,7 +8,7 @@
 import UIKit
 
 protocol DetailsViewControllerInterface: AnyObject {
-    func configure()
+    func configure(amount: Double, currentMeter: Int)
 }
 
 final class DetailsViewController: UIViewController {
@@ -38,11 +38,11 @@ final class DetailsViewController: UIViewController {
     }
 }
 extension DetailsViewController: DetailsViewControllerInterface {
-    func configure() {
+    func configure(amount: Double, currentMeter: Int) {
         saveButton.delegate = self
-        saveButton.setupButtonUI(title: "Save",titleColor: .white,backgroundColor: .blue, cornerRadius: 12)
-        electricMeterReadingLabel.text = "Electric Meter: \(viewModel.currentMeter)"
-        paymentAmountLabel.text = "Payment Amount: \(viewModel.amount)"
+        saveButton.setupButtonUI(title: Constants.shared.globalSave, titleColor: .white,backgroundColor: .blue, cornerRadius: 12)
+        electricMeterReadingLabel.text = Constants.shared.electricMeter + String(currentMeter)
+        paymentAmountLabel.text = Constants.shared.paymentAmount + String(amount)
     }
 }
 extension DetailsViewController: CustomButtonViewProtocol {

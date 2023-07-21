@@ -8,7 +8,7 @@
 import Foundation
 
 
-struct ElectricalEnergyModel: Codable {
+struct ElectricalEnergyModel: Codable, Equatable {
     let customerNumber: String
     var currentMeter: Int
     var lastMeter: Int

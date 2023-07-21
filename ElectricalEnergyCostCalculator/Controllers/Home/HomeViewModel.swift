@@ -10,19 +10,19 @@ import Combine
 
 protocol HomeViewModelInterface: AnyObject {
     var view: HomeViewInterface? { get set }
-    var usersData: [ElectricalEnergyModel]? { get set }
     func viewDidLoad()
-    func start()
-    func getUsersData()
+    func endEditing(text: String)
+    func didButtonTapped()
 }
 
 final class HomeViewModel {
     @Published var customerNumber: String = ""
     @Published var currentMeter: String = ""
     @Published var isReady: Bool = false
-    var usersData: [ElectricalEnergyModel]?
-    var cancellables: Set<AnyCancellable> = []
-    var registeredUser2: ElectricalEnergyModel?
+   private var usersData: [ElectricalEnergyModel]?
+   private var cancellables: Set<AnyCancellable> = []
+   private var registeredUser2: ElectricalEnergyModel?
+   private var registeredUserCurrentMeter: Int = 0
     
     weak var view: HomeViewInterface?
     
@@ -33,16 +33,34 @@ final class HomeViewModel {
 
 extension HomeViewModel: HomeViewModelInterface {
     
-    func getUsersData() {
-        do {
-            usersData = try UserDefaultsOrganizer.users.getModel()
-        } catch {
-            // TODO: Logger
-            AlertManager.showAlert(title: "ERROR", message: error.localizedDescription, preferredStyle: .alert)
+    func didButtonTapped() {
+        if Helpers.shared.checkMeter(currentMeter) == true && Helpers.shared.validateString(customerNumber) == true {
+            if registeredUserCurrentMeter > Int(currentMeter ) ?? 0  {
+                view?.showAlert(title: Constants.shared.globalError, message: Constants.shared.errorMessageHome + String(registeredUserCurrentMeter))
+            } else {
+                view?.pushVC(viewData: DetailsViewData(customerNumber: customerNumber, currentMeter: Int(currentMeter) ?? 0, usersData: usersData ?? [ElectricalEnergyModel(customerNumber: customerNumber, currentMeter: Int(currentMeter) ?? 0, lastMeter: 0, paymentValue: 0)]))
+            }
         }
     }
     
-    func start() {
+    // When the textfield is end editing, it checks if there is a user belonging to the same customer number.
+    func endEditing(text: String) {
+        let registerUser = usersData?.filter { $0.customerNumber == text }
+        if registerUser != [] || registerUser != nil {
+            registeredUserCurrentMeter = registerUser?.first?.currentMeter ?? 0
+        }
+    }
+    
+   private func getUsersData() {
+        do {
+            usersData = try UserDefaultsOrganizer.users.getModel()
+        } catch {
+            LoggerManager.log(.error, error.localizedDescription)
+            AlertManager.showAlert(title: Constants.shared.globalError, message: error.localizedDescription, preferredStyle: .alert)
+        }
+    }
+    
+   private func start() {
         Publishers.CombineLatest($customerNumber, $currentMeter).map {
             customerNumber, currentMeter in
             return !customerNumber.isEmpty && !currentMeter.isEmpty
@@ -56,5 +74,4 @@ extension HomeViewModel: HomeViewModelInterface {
         view?.configureView()
         getUsersData()
     }
-    
 }
