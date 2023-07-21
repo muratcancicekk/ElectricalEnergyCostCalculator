@@ -12,6 +12,7 @@ protocol HomeViewInterface: AnyObject, SeguePerformable {
     func configureView()
     func bind()
     func pushVC(viewData: DetailsViewData)
+    func showAlert(title: String, message: String)
 }
 
 final class HomeViewController: UIViewController {
@@ -34,6 +35,10 @@ final class HomeViewController: UIViewController {
     }
 }
 extension HomeViewController: HomeViewInterface {
+    func showAlert(title: String, message: String) {
+        AlertManager.showAlert(title: title , message: message, preferredStyle: .alert)
+    }
+    
     func pushVC(viewData: DetailsViewData ) {
         let detailsVC = DetailsViewController(viewData: viewData)
         detailsVC.hidesBottomBarWhenPushed = true
@@ -44,13 +49,14 @@ extension HomeViewController: HomeViewInterface {
         customerNumberTextField.$fieldValue.assign(to: &viewModel.$customerNumber)
         currentMeterTextField.$fieldValue.assign(to: &viewModel.$currentMeter)
         
-        viewModel.$isReady.sink {  value in
-            self.submitButton.setupButtonUI(title: Constants.shared.globalSubmit, backgroundColor: value ? .blue.withAlphaComponent(0.6) : .gray.withAlphaComponent(0.6) , cornerRadius: 12)
+        viewModel.$isReady.sink {  isReady in
+            self.submitButton.setupButtonUI(title: Constants.shared.globalSubmit, backgroundColor: isReady ? .blue.withAlphaComponent(0.6) : .gray.withAlphaComponent(0.6) , cornerRadius: 12)
         }.store(in: &cancellables)
         
     }
     
     func configureView() {
+        customerNumberTextField.delegate = self
         submitButton.delegate = self
         submitButton.setupButtonUI(title: Constants.shared.globalSubmit, backgroundColor: .gray.withAlphaComponent(0.6), cornerRadius: 12)
         /// Customer Number Configure
@@ -63,8 +69,11 @@ extension HomeViewController: HomeViewInterface {
 }
 extension HomeViewController: CustomButtonViewProtocol {
     func didButtonTapped(_ value: Int?) {
-        if Helpers.shared.checkMeter(viewModel.currentMeter) == true && Helpers.shared.validateString(viewModel.customerNumber) == true {
-            pushVC(viewData: DetailsViewData(customerNumber: viewModel.customerNumber, currentMeter: Int(viewModel.currentMeter) ?? 0, usersData: viewModel.usersData ?? [ElectricalEnergyModel(customerNumber: viewModel.customerNumber, currentMeter: Int(viewModel.currentMeter) ?? 0, lastMeter: 0, paymentValue: 0)]))
-        }
+        viewModel.didButtonTapped()
+    }
+}
+extension HomeViewController: BaseTextFieldEndEditingProtocol {
+    func endEditing(text: String) {
+        viewModel.endEditing(text: text)
     }
 }
